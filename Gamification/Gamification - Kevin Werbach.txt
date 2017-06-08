@@ -1,0 +1,19 @@
+Gamification - Kevin Werbach - Wharton School Of Business
+
+Gamification is the user of game elements and game design techniques in 
+non-game context.
+
+Game Elements:
+points
+levels
+resources
+quests
+avatars
+social graph
+badges
+
+Why study gamification?
+Psychology
+Design
+Strategy
+Technology
