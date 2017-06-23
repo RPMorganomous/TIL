@@ -1,0 +1,2 @@
+PyCharm =========================
+auto-format = ctrl+alt+shft+l
