@@ -1,0 +1,20 @@
+install node
+
+    https://nodejs.org/en/
+    node -v
+    npm -v
+
+
+install gulp
+    nmp install gulp -g
+
+
+npm init
+    creates package.json file with keyvalue pairs
+
+npm install gulp --save
+
+(can now just use: npm install because of --save flag so now we don't have to
+include in github)
+
+gulpfile.js

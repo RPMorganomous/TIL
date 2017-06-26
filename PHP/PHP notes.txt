@@ -1,0 +1,5 @@
+https://www.tutorialspoint.com/php/php_installation_windows_apache.htm
+
+setup for php windows with apache
+
+https://www.tutorialspoint.com/php/php_installation_windows_apache.htm

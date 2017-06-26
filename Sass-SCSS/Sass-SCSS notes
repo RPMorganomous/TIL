@@ -1,0 +1,15 @@
+6/25/17
+
+sublime
+ctrl shft p = package manager
+install package
+remove package
+
+sass
+sass build
+emmet
+
+ruby
+gem install sass
+
+sass --watch style.scss:css/style.css
