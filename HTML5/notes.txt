@@ -1,3 +1,14 @@
 Here are some notes from my HTML5 course:
 
 work saved at ad.ag/wxjar
+
+w3c validator
+
+Main Elements:
+nav
+header/footer
+main
+article, section
+aside
+div
+
