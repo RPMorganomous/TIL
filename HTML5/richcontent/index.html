@@ -4,18 +4,110 @@
 <title>HTML5 Day Conference</title>
 
 <header>
+    <img src="images/logo.png" width="50%" alt="HTML5 Conference Logo">
     <h1>HTML5 Day Conference</h1>
     <p>Petra, Jordan. November, 4th 2020</p>
 </header>
 
 <main>
+    <figure>
+        <!-- <img src="images/animation.gif"
+            alt="Image animation from the conference"
+            width="90%"> -->
+        <video width="90%"
+                src="resources/animation.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+                webkit-playsinline>
+        </video>
+        <figcaption>Images from previous editions of the conference</figcaption>  
+    </figure>
+
     <h2>The conference in images</h2>
+
+    <ul>
+        <li>
+            <img src="images/event1-1x.jpg"
+                 srcset="images/event1-1x.jpg 1x, images/event1-2x.jpg 2x, images/event1-3x.jpg 3x" 
+                 alt="Event Picture"
+                 width="300" height="82">
+        </li>
+        <li>
+            <img src="images/event2-1x.jpg"
+                 srcset="images/event2-1x.jpg 1x, images/event2-2x.jpg 2x, images/event2-3x.jpg 3x" 
+                 alt="Event Picture"
+                 width="300" height="225">
+        </li>
+        <li>
+            <img src="images/event3-1x.jpg"
+                 srcset="images/event3-1x.jpg 1x, images/event3-2x.jpg 2x, images/event3-3x.jpg 3x" 
+                 alt="Event Picture"
+                 width="300" height="183">
+        </li>
+    </ul>
 
     <h2>Listen to the Welcome Message</h2>
 
+    <audio controls preload="metadata" 
+            src="resources/welcome.mp3"
+            width="10"
+            height="100"></audio>
+
     <h2>About Petra</h2>
 
+    <video poster="images/event3-1x.jpg"
+            width="100%"
+            controls
+            <source src="resources/movie.webm" type="video/webm">
+            <source src="resources/movie.mp4" type="video/mp4">
+            >
+            </video>
+
     <h2>Schedule</h2>
+
+    <table>
+        <caption>Conference Schedule by Room</caption>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Conference Name</th>
+                <th>Room Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9am</td>
+                <td>Keynote</td>
+                <td>Indiana Jones</td>
+            </tr>
+            <tr>
+                <td>12pm</td>
+                <td>Lunch</td>
+                <td>Restaurant</td>
+            </tr>
+            <tr>
+                <td>2pm</td>
+                <td>CSS Training</td>
+                <td>Indiana Jones</td>
+            </tr>
+            <tr>
+                <td rowspan="2">4pm</td>
+                <td rowspan="2">JavaScript Training</td>
+                <td>Indiana Jones</td>
+            </tr>
+            <tr>
+                <td>Harrison Ford</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>9pm</td>
+                <td colspan="2">End of the Conference</td>
+            </tr>
+        </tfoot>
+    </table>
 
 </main>
 

@@ -12,3 +12,22 @@ article, section
 aside
 div
 
+exifremove.com
+
+pixels:
+50 css pixels per cm
+125 css pixels per inch
+
+picresize.com
+
+tinyjpg.com
+
+TABLES
+
+table
+  caption
+  thead
+    tr - table row
+      th - table header cell
+  tbody
+    tr - td - table data cell
