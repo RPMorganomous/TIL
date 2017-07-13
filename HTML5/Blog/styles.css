@@ -1,0 +1,117 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: green;
+    margin-bottom: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:20pt;
+    font-weight:normal;
+}
+/* Child selector  */
+body>header {
+    background-color: yellow; 
+    margin: 0px;
+    padding: 30px;
+}
+
+/* Element selectors */
+
+ul, ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer {
+    padding: 40px 20px;
+    background-color:black;
+    color:white;
+}
+
+article {
+    clear: left;
+}
+
+/* ID Selector  */
+
+#mainarticle {
+    margin:20px;
+}
+
+#subtitle {
+    font-size: larger;
+    margin-top: 0;
+}
+
+#logo {
+    float:right;
+    vertical-align:top;
+    margin-right:0;
+    margin-left:5px;
+}
+
+/* Class Selector  */
+.post {
+    border-left: 4px solid #4286f4;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+
+/* Multiple  */
+p, h2 {
+    /* color: gray; */
+}
+
+/* Descendants  */
+
+/*flexbox container  */
+nav ul {
+        display: flex;
+        flex-direction:row;
+}
+
+/*flexbox items  */
+nav li {
+    font-size: large;
+    font-weight: bold;
+    margin-right: 5px;
+    background-color:white;
+    padding: 3px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+article p {
+    font-size:15.5px;
+    text-align:justify;
+    margin-right:20px;
+}
+
+article h2 {
+    color:#4286f4;
+}
+
+article img {
+    float:left;
+    margin-right:10px;
+    margin-bottom:10px;
+    border:3px solid grey;
+}
+
+/* Style a table */
+table {
+    width:100%;
+    border-collapse:collapse;
+}
+th, td {
+    border:1px solid red;
+    padding:5px;
+    text-align: center;
+}
+th {
+    background-color:orange;
+}

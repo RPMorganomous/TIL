@@ -1,0 +1,75 @@
+body>header {
+    background-color:#61380E; 
+    margin: 0px;
+    padding: 30px;
+}
+
+ul, ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+main {
+    padding: 40px;
+    padding-bottom: 100px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #61380E;
+    margin-bottom: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20.5pt;
+    font-weight: normal; 
+}
+
+main img {
+    max-width: 100%;
+}
+
+footer {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#facebook-page {
+    float: right;
+    margin-right: 5%;
+}
+
+article {
+    clear: left;
+}
+
+#logo {
+    float: right;
+    vertical-align: top;
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav li {
+    font-size: large;
+    font-weight: bold;
+    margin-right: 5px;
+    background-color: white;
+    padding: 3px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+

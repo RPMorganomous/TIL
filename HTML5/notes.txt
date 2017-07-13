@@ -31,3 +31,7 @@ table
       th - table header cell
   tbody
     tr - td - table data cell
+
+CSS
+
+html should only contain the data and the structure - not the styling
