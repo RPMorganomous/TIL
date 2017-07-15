@@ -5,12 +5,12 @@ body>header {
 }
 
 a {
-    color:red;
-    text-decoration:none;
+    color: red;
+    text-decoration: none;
 }
 
 a:visited {
-    color:orange;
+    color: orange;
 }
 
 ul, ol {
@@ -20,7 +20,7 @@ ul, ol {
 
 main {
     padding: 40px;
-    padding-bottom: 120px;
+    padding-bottom: 140px;
 }
 
 body {
