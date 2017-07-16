@@ -1,0 +1,101 @@
+<!doctype html>
+<title>Selfiegram</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="styles.css">
+
+
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDdTmS7d2MFOmcJgpwlbpCjhrEotvkThOI",
+    authDomain: "selfiegram-4ea06.firebaseapp.com",
+    databaseURL: "https://selfiegram-4ea06.firebaseio.com",
+    projectId: "selfiegram-4ea06",
+    storageBucket: "",
+    messagingSenderId: "808908915259"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="selfiegram.js" defer></script>
+
+<header>
+    <h1><img src="images/logo.png" width="225" height="65" alt="Selfiegram"
+             srcset="images/logo-2x.png 2x, images/logo-3x.png 3x"></h1>
+    <section id="loggedIn">
+        <p>Welcome <span id="userName">User</span>. 
+        <a href="#" id="lnkPost" class="important">Post a Selfie</a> 
+        <a href="#" id="lnkLogOut">Log out</a></p>
+    </section>
+    <section id="loggedOut">
+        <a href="#" id="lnkLogIn">Log in</a>
+        <a href="#" id="lnkSignUp">Sign Up</a>
+    </section>    
+</header>
+
+<img id="loading" src="images/loading.svg" width="20%" alt="Loading">
+
+<main>
+    <section id="signup">
+        <h2>Sign Up for a New Account</h2>
+        <form>
+            <label for="label">Name</label>
+            <input id="name" placeholder="Enter your full name" required>
+            <label for="email">Email</label>
+            <input id="email" type="email" required>
+            <label for="pass">Password</label>
+            <input id="pass" type="password" required>
+            <label for="pass2">Confirm Pass</label>
+            <input id="pass2" type="password" required>
+            <button id="btnSignUp">Sign Up</button>
+        </form>
+    </section>
+
+    <section id="login">
+        <h2>Log In into Your Account</h2>
+        <form>
+            <label for="emailLogin">Email</label>
+            <input id="emailLogin" type="email" required>
+            <label for="passLogin">Password</label>
+            <input id="passLogin" type="password" required>
+            <button id="btnLogIn">Log In</button>
+        </form>
+    </section>
+
+    <section id="post">
+        <h2>Post a Selfie</h2>
+        <form>
+            <label for="gallery">From Gallery</label>
+            <input id="gallery" type="file" accept="image/*">
+
+            <section id="selfie">
+                <img id="selfieImage" alt="Your Selfie" width="70%">
+                <select id="filter">
+                    <option value="">No Filter</option>
+                    <option value="grayscale()">I love Gray</option>
+                    <option value="saturate(3)">I love Colors</option>
+                    <option value="sepia()">Retro</option>  
+                    <option value="brightness(1.5)">Sunny</option>  
+                    <option value="brightness(0.5)">Darkness</option>  
+                    <option value="invert()">Alternate Universe</option>
+                </select>
+                <button id="btnPostSelfie">Post Selfie</button>
+            </section>
+        </form>
+    </section>
+
+    <section id="timeline">
+        <h2>Selfiegram Timeline</h2>
+        <ul>
+            <li>
+                <figure>
+                    <img src="" width="100%" alt="Selfie">
+                    <figcaption>By User</figcaption>
+                </figure>
+            </li>
+        </ul>
+    </section>
+
+</main>

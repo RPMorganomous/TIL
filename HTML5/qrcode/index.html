@@ -1,0 +1,21 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>QR Code Reader</title>
+<meta name="viewport" content="width=device-width">
+<script src="qrcode-lib.js"></script>
+<script src="reader.js"></script>
+
+<h1>QR Code Reader</h1>
+
+<img id="qr" width="100" style="display: none">
+<output>No details</output>
+
+<h2>Take a photo</h2>
+<input type="file" accept="image/*" capture="environment">
+
+<h2>Scan with live streaming</h2>
+
+<input type="button" value="Start Camera">
+<input type="button" value="Take Snapshot">
+
+<video width="320" height="240"></video>

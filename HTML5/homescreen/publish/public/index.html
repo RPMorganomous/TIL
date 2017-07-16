@@ -4,6 +4,9 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 
+<script src="qrcode-lib.js"></script>
+<script src="reader.js"></script>      
+
 <style>
     body{
         font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -31,12 +34,13 @@
         font-size:small;
     }
     a {
-        width: 100px;
+        width: 200px;
         display: block;
         padding: 20px;
         /* background-color: red; */
         text-decoration: none;
     }
+
 </style>
 
 <title>PHOODO</title>
@@ -45,10 +49,13 @@
 
 <ul>
     <li>
-        <a href="">
+        <a href=""> 
             <i class="material-icons">camera</i>
             <p>Photo</p>
+            <input type="file" accept="image/*" capture="environment">
         </a>
+        <img id="qr" width="100" style="display: none">
+        <!-- <output>No details</output>  -->
     </li>
     <li>
         <a href="">
