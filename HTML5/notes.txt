@@ -35,3 +35,11 @@ table
 CSS
 
 html should only contain the data and the structure - not the styling
+
+firebase
+
+mkdir publish
+firebase login
+firebase init
+
+firebase deploy

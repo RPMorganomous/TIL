@@ -1,0 +1,19 @@
+AtomusGames App Jam Specifications - 7/15/2017
+
+I'm calling it "phoodo", but you can call it whatever you want.  The client will probably want to rename it anyway.
+
+Requirements:
+1) easily take photos of meals
+2) filter and recall photos on demand
+3) share photos with other phoodo users by group
+
+Install Platforms:
+Android & iPhone
+
+Tools and Tecnniques:
+Any
+
+Timeframe:
+All work is to be turned in before Sunday, 7/23/2017 (1 week from today)
+
+This is a paid job, but I don't know yet how much.  Whatever we decide to charge will be split 4 ways.  Each competitor gets 1 share.  The client will pick a favorite submission and the winner will receive the 4th share.  Example: if Dmitry wins and we charge $400 split 4 ways = $100 to Jona, Dmitry and Rick, but Dmitry would get an extra $100 for a total of $200.
