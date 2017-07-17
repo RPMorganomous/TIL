@@ -43,3 +43,12 @@ firebase login
 firebase init
 
 firebase deploy
+
+==========
+selfigram
+
+rick
+test@fake.com - 123456
+
+npm install -g lite-server
+lite-server
