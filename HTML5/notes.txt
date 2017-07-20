@@ -45,10 +45,62 @@ firebase init
 firebase deploy
 
 ==========
+phoodo
+https://phoodo-5d706.firebaseapp.com/
+
+==========
 selfigram
+https://selfiegram-4ea06.firebaseapp.com/
 
 rick
 test@fake.com - 123456
 
 npm install -g lite-server
 lite-server
+
+=========
+optimize for mobile
+
+default width is 980
+
+typical device-with viewports:
+320: 3.5" 4" screen
+360-375: 4" 5" screen
+400-450: 5+" screen
+600: Tablets 7"
+768: iPad
+800: Tablets 10"
+
+disable selection:
+user-select: none;
+-webkit-user-select: none;
+
+psudo selector = h3::selection{}
+
+touch area minimum 45px
+
+icon control:
+<meta name="apple-mobile-web-app-title" content="Indian Heaven">
+<link rel="apple-touch-icon" href="images/ios-icon.png">
+
+iphone icon size is 120px
+ipad icon size is 152px
+(will auto resize)
+
+<link rel="apple-touch-icon" sizes="120x120" href="images/ios-icon.png">
+
+<link rel="apple-touch-icon" sizes="152x152" href="images/ios-icon.png">
+
+trick for top and bottom on iphone:
+
+body {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    background-color:#BD0D91; /* for the tint */
+
+    background-image: linear-gradient(to bottom, white 0%, white 100%); /* for the content */
+
+}
