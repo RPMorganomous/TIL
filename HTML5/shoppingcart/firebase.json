@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "restaurantmenu",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

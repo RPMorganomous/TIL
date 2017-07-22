@@ -107,3 +107,10 @@ body {
 
 ecommerce app:
 https://ecommerce-65b96.firebaseapp.com/
+
+shoppingcart app:
+https://shoppingcart-22e59.firebaseapp.com/
+
+vs code hint = ctrl+space
+
+css background-color in js is backgroundColor
