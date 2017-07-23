@@ -114,3 +114,4 @@ https://shoppingcart-22e59.firebaseapp.com/
 vs code hint = ctrl+space
 
 css background-color in js is backgroundColor
+

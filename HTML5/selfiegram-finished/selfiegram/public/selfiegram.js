@@ -4,6 +4,8 @@ var lnkLogOut = document.querySelector("#lnkLogOut");
 var lnkLogIn = document.querySelector("#lnkLogIn");
 var lnkSignUp = document.querySelector("#lnkSignUp");
 
+
+
 lnkLogIn.addEventListener("click", function() {
     clearSections();
     sectionLogIn.style.display = "block";
