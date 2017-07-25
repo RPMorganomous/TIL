@@ -38,7 +38,7 @@ html should only contain the data and the structure - not the styling
 
 firebase
 
-mkdir publish
+mkdir public
 firebase login
 firebase init
 
@@ -54,6 +54,9 @@ https://selfiegram-4ea06.firebaseapp.com/
 
 rick
 test@fake.com - 123456
+
+dad
+testdad@fake.com - 123456
 
 npm install -g lite-server
 lite-server
@@ -114,4 +117,6 @@ https://shoppingcart-22e59.firebaseapp.com/
 vs code hint = ctrl+space
 
 css background-color in js is backgroundColor
+
+phoodo - section 18 lecture 142 1:50 login error
 

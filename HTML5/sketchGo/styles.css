@@ -1,0 +1,57 @@
+body {
+    background-color: palevioletred;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+}
+h1 {
+    font-size: 1.2em;
+    color: palevioletred;
+}
+header {
+    background-color: white;
+}
+header, section {
+    padding: 15px;
+    clear: left;
+}
+ul {
+    list-style: none;
+}
+#sketches {
+    list-style: none;
+    padding: 0;
+}
+#sketches li {
+    float: left;
+    background-color: pink;
+    padding: 10px;
+    border: 3px solid black;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+h1 {
+    margin: 0;
+}
+button {
+    background-color:  red;
+    font-size: 1em;
+    color: white;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+p {
+    margin-bottom: 0;
+    color: blue;
+}
+canvas {
+    background: white;
+    border: 3px solid black;
+    margin-left: 15px;
+    margin-top: 30px;
+    width: 300px;
+    height: 300px;
+}

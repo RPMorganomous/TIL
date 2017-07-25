@@ -1,0 +1,16 @@
+{
+    "name": "Sketch Go!",
+    "short_name": "Sketch",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "palevioletred",
+    "theme_color": "red",
+    "description": "This is a geolocation game",
+    "icons": [
+        {
+            "src": "images/icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}

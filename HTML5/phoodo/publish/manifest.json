@@ -1,0 +1,16 @@
+{
+    "name": "Phoodo",
+    "short_name": "Phoodo",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "coral",
+    "theme_color": "bisque",
+    "description": "This is a meal-photo sharing app",
+    "icons": [
+        {
+            "src": "images/phoodo-icon.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        }
+    ]
+}
