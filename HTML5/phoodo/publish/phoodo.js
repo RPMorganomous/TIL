@@ -114,8 +114,6 @@ btnPostSelfie.addEventListener("click", function() {
         })
 });
 
-
-
 // Post Selfie
 var fileSelector = document.querySelector("input[type=file]");
 var selfie = document.querySelector("#selfie");

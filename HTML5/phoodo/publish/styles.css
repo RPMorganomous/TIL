@@ -90,3 +90,7 @@ ul {
     left: 40%;
     display: none;
 }
+
+#rotate {
+    display: hidden;
+}
