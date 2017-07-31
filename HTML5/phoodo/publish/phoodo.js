@@ -93,16 +93,19 @@ btnPostSelfie.addEventListener("click", function() {
     imageRef.put(selectedFile)
         .then(function(){
             // Save an object in Firebase Database
-            var filterValue = document.querySelector("#filter").value;
-            var rotateValue = document.querySelector("#rotate").value;
+            // var filterValue = document.querySelector("#filter").value;
+            // var rotateValue = document.querySelector("#rotate").value;
+            var timeStampValue = 0 - Date.now();
             var db = firebase.database().ref("phoodos");
             var object = db.push();
-            object.set({
+            object.setWithPriority({
                 path: 'photos/' + filename + ".jpg",
                 user: firebase.auth().currentUser.displayName,
-                filter: filterValue,
-                rotate: rotateValue
-            });
+                timeStamp: timeStampValue,
+                                // createdAt: firebase.database.ServerValue.TIMESTAMP,
+                // filter: filterValue,
+                // rotate: rotateValue
+            }, 0 - Date.now());
 
             alert("Phoodo posted!");
             clearSections();
@@ -119,15 +122,15 @@ var fileSelector = document.querySelector("input[type=file]");
 var selfie = document.querySelector("#selfie");
 var selfieImage = document.querySelector("#selfieImage");
 
-var filter = document.querySelector("#filter");
-filter.addEventListener("change", function() {
-    selfieImage.style.filter = filter.value;
-});
+// var filter = document.querySelector("#filter");
+// filter.addEventListener("change", function() {
+//     selfieImage.style.filter = filter.value;
+// });
 
-var rotate = document.querySelector("#rotate");
-rotate.addEventListener("change", function() {
-    selfieImage.style.transform = rotate.value;
-});
+// var rotate = document.querySelector("#rotate");
+// rotate.addEventListener("change", function() {
+//     selfieImage.style.transform = rotate.value;
+// });
 
 // Functions
 function clearSections() {
@@ -142,7 +145,13 @@ function clearSections() {
 function activateLoggedIn() {
    document.querySelector("#loggedIn").style.display = "block";
    document.querySelector("#loggedOut").style.display = "none"; 
+
    updateTimeline();
+
+    document.addEventListener("DOMContentLoaded", function(e) {
+    sortList();
+    });
+
 }
 function activateLoggedOut() {
    document.querySelector("#loggedIn").style.display = "none";
@@ -183,28 +192,71 @@ if (user) {
 function updateTimeline(){
     var ul = document.querySelector("#timeline ul");
     ul.innerHTML = "";
-    var db = firebase.database().ref("phoodos");
-    var list = db.limitToLast(100); // save timestamp and order by
+    var db = firebase.database().ref("phoodos/");
+    // var list = db.limitToLast(100); // save timestamp and order by orderByChild("timeStamp)"
+    var list = db.orderByChild("timeStamp").limitToFirst(100);
     list.on("child_added", function(child) {
         var selfie = child.val();
 
         // Retrieve the image file
         var storageRef = firebase.storage().ref();
         var imageRef = storageRef.child(selfie.path);
-        imageRef.getDownloadURL().then(function(url){
+        
+        var li = document.createElement("li");
+        ul.appendChild(li); // this ensures the <li> is in the right order
 
-            var li = "<li><figure>";
+        imageRef.getDownloadURL().then(function(url){
+        
+
+
+            var html = "<figure>";
             // li += "<img src='" + url + "' width='100%' alt='Phoodo' style='filter:" + 
             //     selfie.filter + "'>";
-            li += "<img src='" + url + "' width='100%' alt='Phoodo' style='filter:" + 
-                selfie.filter + "; transform:" + selfie.rotate + "'>";
-            li += "<figcaption>By " + selfie.user + "</figcaption>";
-            li += "</figure></li>";
+            html += "<img src='" + url + "' width='100%' alt='Phoodo'>";
+            // li += "<img src='" + url + "' width='100%' alt='Phoodo' style='filter:" + 
+            //     selfie.filter + "; transform:" + selfie.rotate + "'>";
+            html += "<figcaption class='figcaptionClass'>By " + selfie.user + ": " + selfie.timeStamp + "</figcaption>";
+            html += "</figure>";
 
-            ul.innerHTML += li;
+            li.innerHTML = html;
 
         })
-
-
+    console.log("after requesting download url");
     });
+}
+
+function sortList() {
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("timelineul");
+  switching = true;
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    b = document.getElementsByClassName("figcaptionClass");
+    //Loop through all list items:
+    console.log(b);
+    console.log(b.length);
+    for (i = 0; i < b.length; i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*check if the next item should
+      switch place with the current item:*/
+      console.log(b[i].innerHTML);
+      console.log(b[i+1].innerHTML);
+      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+        /*if next item is alphabetically lower than current item,
+        mark as a switch and break the loop:*/
+        shouldSwitch= true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark the switch as done:*/
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+    }
+  }
 }
