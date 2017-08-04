@@ -1,0 +1,55 @@
+label, input {
+    display: block;
+}
+input {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+input:required {
+    border-right: 10px solid gray;
+}
+
+input:optional {
+    border-right: 10px solid silver;
+}
+
+input:focus:invalid {
+     border-left: 10px solid red;   
+}
+
+input:focus:valid {
+     border-left: 10px solid green;       
+}
+
+.nowrap label, .nowrap input {
+    display: inline;
+    width: auto;
+}
+.nowrap input:optional {
+    border: 0;
+}
+
+textarea {
+    width: 90%;
+    height: 150px;
+}
+
+fieldset {
+    margin-bottom: 30px;
+    background-color: #DDD;
+}
+
+legend {
+    background-color: #DDD;
+    padding: 2px 12px;
+}
+
+input[type=submit] {
+    font-size: large;
+    width: 100%;
+    padding: 15px;
+    background-color: yellow;
+    margin-top: 25px;
+}

@@ -1,0 +1,94 @@
+<!doctype html>
+<title>Drink Club Winery</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="styles.css">
+
+<form action="https://formspree.io/your@email.com" method="POST">
+
+    <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="name">Name</label>
+        <input autofocus autocomplete="given-name" placeholder="Your full name" required type="text" id="name" name="name">
+
+        <label for="phone">Phone Number</label>
+        <input pattern="[0-9]*" required autocomplete="tel" type="tel" id="phone" name="phone">
+
+        <label for="email">Email</label>
+        <input required autocomplete="email" type="email" id="email" name="email">
+
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="birthday">
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Wine Order</legend>
+
+        <label for="merlot">How # Merlot?</label>
+        <input type="number" min="0" max="100" pattern="[0-9]*" id="merlot" name="merlot">
+
+        <label for="champagne">How # Champagne?</label>
+        <input type="number" min="0" max="100" pattern="[0-9]*" id="champagne" name="champagne">
+
+        <label for="merlot">How # Malbec?</label>
+        <input type="number" min="0" max="100" pattern="[0-9]*" id="Malbec" name="Malbec">
+
+        <section class="nowrap">
+            <input type="checkbox" value="Gift" id="gift" name="gift">
+            <label for="gift">This is a gift</label>
+        </section>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Shipping Details</legend>
+        
+        <section class="nowrap">
+            <input type="radio" value="standard" id="standard" name="shipping-type">
+            <label for="standard">Standard Shipping (£5)</label>
+        </section>
+        <section class="nowrap">
+            <input type="radio" value="dhl" id="dhl" name="shipping-type">
+            <label for="dhl">DHL Shipping (£20)</label>
+        </section>
+
+        <label for="street">Street</label>
+        <input placeholder="Enter your street name" type="text" id="street" name="street">
+
+        <label for="streetnumber">Street #</label>
+        <input placeholder="Enter your street number" type="number" pattern="[0-9]*" id="streetnumber" name="streetnumber">
+
+        <label for="city">City and State/Province</label>
+        <input type="text" id="city" name="city">
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+            <optgroup label="Europe">
+                <option value="ie">Ireland</option>
+                <option value="is">Iceland</option>
+                <option value="fr">France</option>
+                <option value="es">Spain</option>
+                <option value="uk" selected>United Kingdom</option>   
+            </optgroup>
+            <optgroup label="Americas">         
+                <option value="us">United States</option>
+            </optgroup>
+        </select>
+        
+
+
+        <label for="time">Prefered Time to receive the order</label>
+        <input type="time" id="time" name="time">
+
+        <label for="comments">Comments</label>
+        <textarea id="comments" name="comments"></textarea>
+
+
+    </fieldset>
+
+    <input type="submit" value="Order">
+
+</form>
