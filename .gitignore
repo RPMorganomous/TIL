@@ -1,3 +1,7 @@
+reactnative/albums/android
+reactnative/albuns/ios
+reactnative/albums/node_modules
+
 # Built application files
 *.apk
 *.ap_
